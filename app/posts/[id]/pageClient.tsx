@@ -78,7 +78,7 @@ const PostPageClient: React.FC<PostPageClientProps> = ({ params }) => {
                     Theme: {capitalizeFirstLetter(post.title)}
                 </h1>
                 <div
-                    className="rounded-lg border border-transparent px-5 py-4 transition-colors border-gray-300 dark:border-neutral-700 light:border-neutral-700">
+                    className="rounded-lg border px-5 py-4 transition-colors border-gray-300 dark:border-neutral-700">
                     <LettersAvatar name={user.name}/>
                     <p className="mt-2">{capitalizeFirstLetter(post.body)}</p>
                     <p className="mb-2 mt-2">

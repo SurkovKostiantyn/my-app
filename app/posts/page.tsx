@@ -62,7 +62,7 @@ const PostsPage: React.FC = () => {
                     It&apos;s Posts page
                 </p>
                 {posts.map((post: Post) => (
-                    <div key={post.id} className="rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30">
+                    <div key={post.id} className="rounded-lg border px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30">
                         <Link href={`/posts/${post.id}`}>
                             <LettersAvatar name={userMap.get(post.userId) || 'Anonymous'} />
                             <h2 className="mb-2 mt-2">Theme: {capitalizeFirstLetter(post.title)}</h2>

@@ -3,7 +3,7 @@
 FROM node:22-alpine
 
 # Create and change to the app directory.
-WORKDIR /usr/src/app
+WORKDIR /usr/app
 
 # Copy package.json, package-lock.json (if available), and next.config.js
 COPY package*.json next.config.mjs ./

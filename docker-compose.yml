@@ -3,7 +3,7 @@
       build: ..
       command: npm run dev
       volumes:
-        - .:/usr/src/app
+        - .:/usr/app
       ports:
         - "3000:3000"
       restart: unless-stopped

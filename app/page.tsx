@@ -11,7 +11,7 @@ export default function Home() {
 
     const footerLinks = [
         { href: 'https://github.com/SurkovKostiantyn/my-app', label: '...check github'},
-        { href: 'https://my-app-vercel-vert.vercel.app/', label: '...check Versel'},
+        { href: 'https://my-app-42e1.vercel.app', label: '...check Versel'},
     ];
 
   return (

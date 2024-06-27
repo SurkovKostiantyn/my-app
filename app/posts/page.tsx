@@ -50,7 +50,7 @@ const PostsPage: React.FC = () => {
     }, [loadPosts, loadUsers]);
 
     if (!posts.length || !users.length) {
-        return <CircularProgress />;
+        return <CircularProgress color="inherit"/>;
     }
 
     return (
@@ -71,6 +71,7 @@ const PostsPage: React.FC = () => {
                         hover:border-solid
                         hover:border-black
                         hover:dark:border-white
+                        duration-100
                         ">
                         <Link href={`/posts/${post.id}`}>
                             <LettersAvatar name={userMap.get(post.userId) || 'Anonymous'} />

@@ -67,7 +67,7 @@ const PostPageClient: React.FC<PostPageClientProps> = ({ params }) => {
     }, [params.id]);
 
     if (!post || !user) {
-        return <CircularProgress />;
+        return <CircularProgress color="inherit"/>;
     }
 
     return (
@@ -105,7 +105,9 @@ const PostPageClient: React.FC<PostPageClientProps> = ({ params }) => {
                          border
                          border-dashed
                          border-gray-500
-                         dark:border-gray-500">
+                         dark:border-gray-500
+                         duration-100
+                         ">
                         <h2>{capitalizeFirstLetter(comment.name)}:</h2>
                         <p className="mt-2 mb-2">{capitalizeFirstLetter(comment.body)}</p>
                         <p>Author: <a href={"mailto:" + comment.email}>{comment.email}</a></p>

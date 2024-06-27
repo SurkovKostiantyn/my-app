@@ -1,18 +1,18 @@
 # Use the official Node.js latest LTS (Long Term Support) image as the base image.
 # https://hub.docker.com/_/node
-FROM node:22-alpine
+FROM node:18-alpine
 
 # Create and change to the app directory.
 WORKDIR /usr/app
 
-# Copy package.json, package-lock.json (if available), and next.config.js
+# Copy package.json, package-lock.json (if available), and next.config.mjs
 COPY package*.json next.config.mjs ./
 
-# Install all dependencies, remove this if you deploy to production.
+# Install all dependencies, consider a production-ready approach if deploying.
 RUN npm install
 
 # Copy local code to the container image.
-COPY .. .
+COPY . .
 
 # Build the Next.js application.
 RUN npm run build

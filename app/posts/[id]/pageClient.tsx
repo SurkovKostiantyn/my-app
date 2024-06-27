@@ -86,7 +86,9 @@ const PostPageClient: React.FC<PostPageClientProps> = ({ params }) => {
                     </p>
                     <button
                         onClick={() => {
-                            favorites.includes(post.id) ? removeFavorite(post.id) : addFavorite(post.id);
+                            if (post && post.id !== null) {
+                                favorites.includes(post.id) ? removeFavorite(post.id) : addFavorite(post.id);
+                            }
                         }}
                     >
                         {post && favorites.includes(post.id) ? <FavoriteIcon/> : <FavoriteBorderIcon/>}

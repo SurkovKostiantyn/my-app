@@ -16,7 +16,19 @@ const Navigation = ({ links }: NavigationProps) => {
                 <Link
                     key={link.href}
                     href={link.href}
-                    className="rounded-lg border px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+                    className="
+                        rounded-lg
+                        px-5 py-4
+                        text-gray-500
+                        hover:text-black
+                        hover:dark:text-white
+                        border
+                        border-dashed
+                        border-white
+                        dark:border-black
+                        hover:border-black
+                        hover:dark:border-white
+                        "
                 >
                     {link.label}
                 </Link>

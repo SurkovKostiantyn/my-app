@@ -78,7 +78,7 @@ const PostPageClient: React.FC<PostPageClientProps> = ({ params }) => {
                     Theme: {capitalizeFirstLetter(post.title)}
                 </h1>
                 <div
-                    className="rounded-lg border px-5 py-4 transition-colors border-gray-300 dark:border-neutral-700">
+                    className="rounded-lg px-5 py-4 border border-dashed border-gray-500 dark:border-gray-500">
                     <LettersAvatar name={user.name}/>
                     <p className="mt-2">{capitalizeFirstLetter(post.body)}</p>
                     <p className="mb-2 mt-2">
@@ -99,7 +99,13 @@ const PostPageClient: React.FC<PostPageClientProps> = ({ params }) => {
                 <h2 className="px-5 py-4">Comments</h2>
                 {comments.map((comment) => (
                     <div key={comment.id}
-                         className="rounded-lg border px-5 py-4 transition-colors border-gray-300 dark:border-neutral-700">
+                         className="
+                         rounded-lg
+                         px-5 py-4
+                         border
+                         border-dashed
+                         border-gray-500
+                         dark:border-gray-500">
                         <h2>{capitalizeFirstLetter(comment.name)}:</h2>
                         <p className="mt-2 mb-2">{capitalizeFirstLetter(comment.body)}</p>
                         <p>Author: <a href={"mailto:" + comment.email}>{comment.email}</a></p>

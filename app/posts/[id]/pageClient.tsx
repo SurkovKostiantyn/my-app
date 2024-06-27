@@ -78,7 +78,7 @@ const PostPageClient: React.FC<PostPageClientProps> = ({ params }) => {
                     Theme: {capitalizeFirstLetter(post.title)}
                 </h1>
                 <div
-                    className="rounded-lg border border-transparent px-5 py-4 transition-colors border-gray-300 dark:border-neutral-700">
+                    className="rounded-lg border border-transparent px-5 py-4 transition-colors border-gray-300 dark:border-neutral-700 light:border-neutral-700">
                     <LettersAvatar name={user.name}/>
                     <p className="mt-2">{capitalizeFirstLetter(post.body)}</p>
                     <p className="mb-2 mt-2">
@@ -86,9 +86,7 @@ const PostPageClient: React.FC<PostPageClientProps> = ({ params }) => {
                     </p>
                     <button
                         onClick={() => {
-                            if (post && post.id !== null) {
-                                favorites.includes(post.id) ? removeFavorite(post.id) : addFavorite(post.id);
-                            }
+                            favorites.includes(post.id) ? removeFavorite(post.id) : addFavorite(post.id);
                         }}
                     >
                         {post && favorites.includes(post.id) ? <FavoriteIcon/> : <FavoriteBorderIcon/>}
@@ -99,7 +97,7 @@ const PostPageClient: React.FC<PostPageClientProps> = ({ params }) => {
                 <h2 className="px-5 py-4">Comments</h2>
                 {comments.map((comment) => (
                     <div key={comment.id}
-                         className="rounded-lg border border-transparent px-5 py-4 transition-colors border-gray-300 dark:border-neutral-700">
+                         className="rounded-lg border border-transparent px-5 py-4 transition-colors border-gray-300 dark:border-neutral-700 light:border-neutral-700">
                         <h2>{capitalizeFirstLetter(comment.name)}:</h2>
                         <p className="mt-2 mb-2">{capitalizeFirstLetter(comment.body)}</p>
                         <p>Author: <a href={"mailto:" + comment.email}>{comment.email}</a></p>

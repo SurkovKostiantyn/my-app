@@ -20,11 +20,6 @@ interface Post {
     body: string;
 }
 
-interface User {
-    id: number;
-    name: string;
-}
-
 const PostsPage: React.FC = () => {
     const loadPosts = useApiStore((state) => state.loadPosts);
     const loadUsers = useApiStore((state) => state.loadUsers);
@@ -71,7 +66,7 @@ const PostsPage: React.FC = () => {
                         <Link href={`/posts/${post.id}`}>
                             <LettersAvatar name={userMap.get(post.userId) || 'Anonymous'} />
                             <h2 className="mb-2 mt-2">Theme: {capitalizeFirstLetter(post.title)}</h2>
-                            <p>{post.body}</p>
+                            <p>{capitalizeFirstLetter(truncateText(post.body,120))}</p>
                             <p className="mb-2 mt-2">
                                 Author: {userMap.get(post.userId) || 'Anonymous'}
                             </p>

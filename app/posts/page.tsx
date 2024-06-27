@@ -1,7 +1,7 @@
 // app/posts/page.tsx
 'use client';
 
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import useApiStore from '@/app/store/useApiStore';
 import useFavoritesStore from '@/app/store/useFavoritesStore';
 import Link from 'next/link';

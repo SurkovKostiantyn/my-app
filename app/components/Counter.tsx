@@ -12,14 +12,14 @@ const Counter: React.FC = () => {
         <div className="w-full max-w-5xl flex flex-col justify-center flex-grow">
             <p className="px-4 py-4 text-center font-mono text-sm">Count: {count}</p>
             <div className="w-full flex flex-row justify-center">
-                <button onClick={increment} className="px-4 py-4">
-                    <AddIcon/>
-                </button>
                 <button onClick={decrement} className="px-4 py-4">
                     <RemoveIcon/>
                 </button>
                 <button onClick={reset} className="px-4 py-4">
                     <RestartAltIcon/>
+                </button>
+                <button onClick={increment} className="px-4 py-4">
+                    <AddIcon/>
                 </button>
             </div>
         </div>

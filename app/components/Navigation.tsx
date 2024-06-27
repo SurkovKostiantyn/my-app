@@ -28,6 +28,7 @@ const Navigation = ({ links }: NavigationProps) => {
                         dark:border-black
                         hover:border-black
                         hover:dark:border-white
+                        duration-100
                         "
                 >
                     {link.label}

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import TodoList from './TodoList';
 import TodoForm from './TodoForm';
+import Header from "./components/Header.jsx";
 
 function App() {
     const [todos, setTodos] = useState([]);
@@ -24,7 +25,9 @@ function App() {
 
     return (
         <div>
-            <h1>TODO List</h1>
+            <Header text={"Текст 1"} level={1}/>
+            <Header text={"Текст 2"} level={2}/>
+            <Header text={"Текст 3"} level={3}/>
             <TodoForm addTodo={addTodo} />
             <TodoList
                 todos={todos}

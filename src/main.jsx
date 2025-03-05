@@ -5,6 +5,7 @@ import Home from "./pages/Home.jsx";
 import Profile from "./pages/Profile.jsx";
 import Layout from "./pages/Layout.jsx"
 import NoPage from "./pages/NoPage.jsx"
+import 'normalize.css';
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>

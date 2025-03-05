@@ -1,30 +1,30 @@
 import React from 'react';
-import Button from '@mui/material/Button';
+import { ListItem, ListItemIcon, ListItemText, IconButton, Checkbox } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
-import Checkbox from '@mui/material/Checkbox';
 
-function TodoItem({todo, onToggle, onDelete}) {
+function TodoItem({ todo, onToggle, onDelete }) {
     return (
-        <li>
-            <Checkbox
-                type="checkbox"
-                checked={todo.completed}
-                onChange={() => onToggle(todo.id)}
-                color="success"
+        <ListItem
+            secondaryAction={
+                <IconButton edge="end" aria-label="delete" onClick={() => onDelete(todo.id)}>
+                    <DeleteIcon color="error" />
+                </IconButton>
+            }
+            disablePadding
+        >
+            <ListItemIcon>
+                <Checkbox
+                    edge="start"
+                    checked={todo.completed}
+                    onChange={() => onToggle(todo.id)}
+                    color="success"
+                />
+            </ListItemIcon>
+            <ListItemText
+                primary={todo.text}
+                sx={{ textDecoration: todo.completed ? 'line-through' : 'none' }}
             />
-            <span style={{textDecoration: todo.completed ? 'line-through' : 'none'}}>
-                {todo.text}
-            </span>
-            <Button
-                variant="contained"
-                onClick={() => onDelete(todo.id)}
-                endIcon={<DeleteIcon/>}
-                color="success"
-                size="small"
-            >
-                Видалити
-            </Button>
-        </li>
+        </ListItem>
     );
 }
 

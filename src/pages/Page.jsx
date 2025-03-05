@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import TodoList from './TodoList';
-import TodoForm from './TodoForm';
-import Header from "./components/Header.jsx";
+import TodoList from '../components/TodoList.jsx';
+import TodoForm from '../components/TodoForm.jsx';
+import Header from "../components/Header.jsx";
 
-function App() {
+function Page() {
     const [todos, setTodos] = useState([]);
 
     const addTodo = (text) => {
@@ -38,4 +38,4 @@ function App() {
     );
 }
 
-export default App;
+export default Page;

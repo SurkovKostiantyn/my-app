@@ -1,8 +1,16 @@
 import React from 'react';
-import { List, Paper } from '@mui/material';
+import { List, Paper, Typography } from '@mui/material';
 import TodoItem from './TodoItem.jsx';
 
 function TodoList({ todos, onToggle, onDelete }) {
+    if (!todos || todos.length === 0) {
+        return (
+            <Typography variant="body1" align="center" sx={{ mt: 2 }}>
+                Немає завдань для відображення.
+            </Typography>
+        );
+    }
+
     return (
         <Paper elevation={3} sx={{ mt: 2, p: 1 }}>
             <List>

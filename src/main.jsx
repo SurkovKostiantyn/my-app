@@ -5,6 +5,7 @@ import Home from "./pages/Home.jsx";
 import Profile from "./pages/Profile.jsx";
 import Layout from "./pages/Layout.jsx"
 import NoPage from "./pages/NoPage.jsx"
+import Proptypes from "./pages/Proptypes.jsx";
 import 'normalize.css';
 
 createRoot(document.getElementById('root')).render(
@@ -14,6 +15,7 @@ createRoot(document.getElementById('root')).render(
               <Route index element={<Home />} />
               <Route path="page" element={<Page />} />
               <Route path="profile" element={<Profile />} />
+              <Route path="proptypes" element={<Proptypes />} />
               <Route path="*" element={<NoPage />} />
           </Route>
       </Routes>

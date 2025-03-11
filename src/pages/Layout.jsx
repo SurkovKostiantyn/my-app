@@ -17,6 +17,7 @@ const navItems = [
     { name: "Home", path: "/" },
     { name: "Page", path: "/page" },
     { name: "Profile", path: "/profile" },
+    { name: "Proptypes", path: "/proptypes"}
 ];
 
 const Layout = () => {
